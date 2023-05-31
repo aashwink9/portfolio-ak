@@ -13,8 +13,6 @@ const roboto_slab = Roboto_Slab({
   subsets: ['latin'],
 });
 
-//test commit
-
 function SkillSection() {
   return (
     <div id='skills' className='bg-skill-bg rounded-2xl p-5 h-96'>
