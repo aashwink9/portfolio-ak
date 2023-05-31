@@ -57,7 +57,7 @@ function ProjectSection() {
             <h1 className='text-2xl mt-3 ml-1'><b>Created in: C#</b></h1>
             <p className='ml-2 mt-3 text-xl'>This webserver, created in C#, is capable of using<br/>
                                              the RSA encryption algorithm to create Base64 encoded<br/>
-                                             private and public key for a user, and then using C#&quot;s<br/>
+                                             private and public key for a user, and then using C#&apos;s<br/>
                                              BigInteger class, encodes a given message and sends it<br/>
                                              to another server hosted elsewhere, with the same code.<br/>
                                              It uses asynchronous programming to send/listen for<br/>
@@ -99,7 +99,7 @@ function NameHeading() {
     <div className='absolute top-[40vh] w-full px-32'>
       <div className='flex justify-center gap-28'>
         <div>
-          <h1 className='text-7xl'>Hi, I&quot;m Aashwin</h1>
+          <h1 className='text-7xl'>Hi, I&apos;m Aashwin</h1>
           <TypewriterSub className={roboto_mono.className}/>
           <button className={`${roboto_slab.className} bg-white text-black text-2xl text-center 
           rounded-3xl w-32 h-11 mt-5`}>
