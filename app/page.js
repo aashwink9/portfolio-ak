@@ -1,113 +1,142 @@
 import Image from 'next/image'
+import { Roboto_Mono, Roboto_Slab } from 'next/font/google';
+import { SkillDonut } from './skill-charts';
+import { TypewriterSub } from './client-comps';
 
-export default function Home() {
+const roboto_mono = Roboto_Mono({
+  weight: '400',
+  subsets: ['latin'],
+});
+
+const roboto_slab = Roboto_Slab({
+  weight: '800',
+  subsets: ['latin'],
+});
+
+
+
+function SkillSection() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <div id='skills' className='bg-skill-bg rounded-2xl p-5 h-96'>
+      <h1 className='text-5xl text-center'><b>SKILLS</b></h1>
+      <div className='flex justify-between p-10'>
+        <SkillDonut skillPercentage={80} skillColor={'#5bd7f0'} lang={"Python"} />
+        <SkillDonut skillPercentage={70} skillColor={'#5b9ef0'} lang={"Java"} />
+        <SkillDonut skillPercentage={60} skillColor={'#2831bf'} lang={"JavaScript"} />
+        <SkillDonut skillPercentage={60} skillColor={'#5d07f2'} lang={"React"} />
+        <SkillDonut skillPercentage={50} skillColor={'#7c07f2'} lang={"C#"} />
+        <SkillDonut skillPercentage={20} skillColor={'#9007f2'} lang={"C"} />
+      </div>
+    </div>
+  );
+}
+
+function ProjectSection() {
+  return (
+    <div id='projects' className='p-5'>
+      <div className='flex justify-between mt-10'>
+        <div className='project-bubble w-80 h-80 bg-project-bg rounded-full overflow-visible inline-block'>
+          <div className='absolute mt-36 ml-36 whitespace-nowrap'>
+            <h1 className='text-xl tracking-[10px] ml-2'>FEATURED PROJECT</h1>
+            <h1 className='text-5xl mt-3'>Giddion - An All Purpose<br/>Discord Bot</h1>
+            <h1 className='text-2xl mt-3 ml-1'><b>Created in: Python, PyCord</b></h1>
+            <p className='ml-2 mt-3 text-xl'>Capable of playing music from title or URL, responding<br/>
+                                             to specific keywords, and moderating a server, this<br/>
+                                             bot packs the power to organize a server through<br/>
+                                             the magic of the discord python module and the async<br/>
+                                             functionality of python!</p>
+          </div>
+        </div>
+        <Image src='/giddion-placeholder.gif' width={300} height={100} alt='giddion placeholder' className='mt-32'/>
+      </div>
+      
+      <div className='flex justify-between mt-44'>
+      <Image src='/crypto-placeholder.gif' width={300} height={100} alt='crypto placeholder' className='mt-32 ml-11'/>
+        <div className='project-bubble w-80 h-80 bg-project-bg rounded-full overflow-visible'>
+          <div className='mt-36 -ml-[250px]  whitespace-nowrap'>
+            <h1 className='text-xl tracking-[10px] ml-1'>FEATURED PROJECT</h1>
+            <h1 className='text-5xl mt-3'>Encryption Messenger</h1>
+            <h1 className='text-2xl mt-3 ml-1'><b>Created in: C#</b></h1>
+            <p className='ml-2 mt-3 text-xl'>This webserver, created in C#, is capable of using<br/>
+                                             the RSA encryption algorithm to create Base64 encoded<br/>
+                                             private and public key for a user, and then using C#'s<br/>
+                                             BigInteger class, encodes a given message and sends it<br/>
+                                             to another server hosted elsewhere, with the same code.<br/>
+                                             It uses asynchronous programming to send/listen for<br/>
+                                             incoming HTTP requests, and then perform the operations<br/>
+                                             accordingly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function NavBar() {
+  return (
+    <div className='h-22 p-14'>
+      <div className='flex justify-between text-2xl'>
+        <h1 className='bg-white rounded-full w-20 h-20 text-4xl text-black text-center pt-5'><b>AK</b></h1>
+        <div className='flex justify-between gap-16'>
+          <a href="#skills"><h1><b>SKILLS</b></h1></a>
+          <a href="#projects"><h1><b>PROJECTS</b></h1></a>
+          <a href='/Resume-Aashwin_Katiyar.pdf'><h1><b>RESUME</b></h1></a>
+          <h1><b>HOBBIES</b></h1>
+          <a href="https://www.linkedin.com/in/aashwin-katiyar-104b58183/" className='-mt-3'>
+            <Image src="/icon-linkedin.svg" width={50} height={50} alt="LinkedIn"/>
+          </a>
+          <a href="https://github.com/aashwink9" className='-mt-4'>
+            <Image src="/icon-github.svg" width={54} height={54} alt="Github"/>
           </a>
         </div>
       </div>
+    </div>
+  );
+}
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+
+function NameHeading() {
+  return (
+    <div className='absolute top-[40vh] w-full px-32'>
+      <div className='flex justify-center gap-28'>
+        <div>
+          <h1 className='text-7xl'>Hi, I'm Aashwin</h1>
+          <TypewriterSub className={roboto_mono.className}/>
+          <button className={`${roboto_slab.className} bg-white text-black text-2xl text-center 
+          rounded-3xl w-32 h-11 mt-5`}>
+            Hire Me
+          </button>
+        </div>
+        <div></div>
       </div>
+    </div>
+  );
+}
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+function LandingPage() {
+  return (
+    <div className='w-full h-[100vh]'>
+      <NavBar/>
+      <NameHeading/>
+    </div>
+  );
+}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+function AllOtherSections() {
+  return (
+    <div className='p-14'>
+      <SkillSection className={roboto_mono.className}/>
+      <ProjectSection/>
+    </div>
+  );
+}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+export default function Home() {
+  return (
+    <main>
+      <LandingPage/>
+      <AllOtherSections/>
     </main>
   )
 }
