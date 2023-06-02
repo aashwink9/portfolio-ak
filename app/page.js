@@ -101,10 +101,12 @@ function NameHeading() {
         <div>
           <h1 className='text-7xl'>Hi, I&apos;m Aashwin</h1>
           <TypewriterSub className={roboto_mono.className}/>
-          <button className={`${roboto_slab.className} bg-white text-black text-2xl text-center 
-          rounded-3xl w-32 h-11 mt-5`}>
-            Hire Me
-          </button>
+          <a href='mailto:ak2577@rit.edu'>
+            <button className={`${roboto_slab.className} bg-white text-black text-2xl text-center 
+            rounded-3xl w-32 h-11 mt-5`}>
+              Hire Me
+            </button>
+          </a>
         </div>
         <div></div>
       </div>
@@ -121,6 +123,20 @@ function LandingPage() {
   );
 }
 
+
+function UnderConstruction() {
+  return (
+    <div className='p-16 text-xl'>
+      <h1>After a massive overhaul with an organized tech stack,
+          I am proud to showcase this website. Although it is still 
+          under construction, I will be adding rapid improvements 
+          and enhancements to it moving forward. Thank you for checking 
+          out the early beta!</h1>
+    </div>
+  );
+}
+
+
 function AllOtherSections() {
   return (
     <div className='p-14'>
@@ -130,11 +146,13 @@ function AllOtherSections() {
   );
 }
 
+
 export default function Home() {
   return (
     <main>
       <LandingPage/>
       <AllOtherSections/>
+      <UnderConstruction/>
     </main>
   )
 }
