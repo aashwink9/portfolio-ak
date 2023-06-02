@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     colors: {
+      'unfinished-grey': '#c2c2c2',
       'circle-blur': 'rgba(255, 255, 255, 0.2)',
       'project-bg': '#2a1f66',
       'skill-bg': '#1e154a',

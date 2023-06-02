@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Roboto_Mono, Roboto_Slab } from 'next/font/google';
 import { SkillDonut } from './skill-charts';
 import { TypewriterSub } from './client-comps';
+import Link from 'next/link';
 
 const roboto_mono = Roboto_Mono({
   weight: '400',
@@ -34,38 +35,73 @@ function ProjectSection() {
     <div id='projects' className='p-5'>
       <div className='flex justify-between mt-10'>
         <div className='project-bubble w-80 h-80 bg-project-bg rounded-full overflow-visible inline-block'>
-          <div className='absolute mt-36 ml-36 whitespace-nowrap'>
+          <div className='absolute mt-36 ml-36 w-[600px]'>
             <h1 className='text-xl tracking-[10px] ml-2'>FEATURED PROJECT</h1>
-            <h1 className='text-5xl mt-3'>Giddion - An All Purpose<br/>Discord Bot</h1>
-            <h1 className='text-2xl mt-3 ml-1'><b>Created in: Python, PyCord</b></h1>
-            <p className='ml-2 mt-3 text-xl'>Capable of playing music from title or URL, responding<br/>
-                                             to specific keywords, and moderating a server, this<br/>
-                                             bot packs the power to organize a server through<br/>
-                                             the magic of the discord python module and the async<br/>
-                                             functionality of python!</p>
+            <h1 className='text-5xl mt-3'>Portfolio Website</h1>
+            <h1 className='text-2xl mt-3 ml-1'><b>Tech Stack: NextJS, ReactJS, Tailwind CSS, JavaScript</b></h1>
+            <p className='ml-2 mt-3 text-xl'>This portfolio website (currently still in development) is my latest proud creation.
+                                               Although the functionality of it is limited, I will be adding some exciting 
+                                               new features, animations, and pages over the coming days, to showcase my work 
+                                               more prominently. Thank you for checking out the early beta!</p>
           </div>
         </div>
         <Image src='/giddion-placeholder.gif' width={300} height={100} alt='giddion placeholder' className='mt-32'/>
       </div>
-      
+
+      <div className='flex justify-between mt-36'>
+        <div></div>
+          <div className='project-bubble w-80 h-80 bg-project-bg rounded-full overflow-visible'>
+            <div className='mt-36 -ml-[250px] w-[600px]'>
+              <h1 className='text-xl tracking-[10px] ml-1'>FEATURED PROJECT</h1>
+              <h1 className='text-5xl mt-3'>Giddion - An All Purpose Discord Bot</h1>
+              <h1 className='text-2xl mt-3 ml-1'><b>Created in: Python, PyCord</b></h1>
+              <p className='ml-2 mt-3 text-xl'>Capable of playing music from title or URL, responding
+                                             to specific keywords, and moderating a server, this
+                                             bot packs the power to organize a server through
+                                             the magic of the discord python module and the async
+                                             functionality of python!
+                </p>
+            </div>
+         </div>
+      </div>
+
       <div className='flex justify-between mt-44'>
-      <Image src='/crypto-placeholder.gif' width={300} height={100} alt='crypto placeholder' className='mt-32 ml-11'/>
-        <div className='project-bubble w-80 h-80 bg-project-bg rounded-full overflow-visible'>
-          <div className='mt-36 -ml-[250px]  whitespace-nowrap'>
-            <h1 className='text-xl tracking-[10px] ml-1'>FEATURED PROJECT</h1>
-            <h1 className='text-5xl mt-3'>Encryption Messenger</h1>
-            <h1 className='text-2xl mt-3 ml-1'><b>Created in: C#</b></h1>
-            <p className='ml-2 mt-3 text-xl'>This webserver, created in C#, is capable of using<br/>
-                                             the RSA encryption algorithm to create Base64 encoded<br/>
-                                             private and public key for a user, and then using C#&apos;s<br/>
-                                             BigInteger class, encodes a given message and sends it<br/>
-                                             to another server hosted elsewhere, with the same code.<br/>
-                                             It uses asynchronous programming to send/listen for<br/>
-                                             incoming HTTP requests, and then perform the operations<br/>
-                                             accordingly.
-            </p>
+          <div className='project-bubble w-80 h-80 bg-project-bg rounded-full overflow-visible inline-block'>
+            <div className='absolute mt-36 ml-36 w-[600px]'>
+              <h1 className='text-xl tracking-[10px] ml-2'>FEATURED PROJECT</h1>
+              <h1 className='text-5xl mt-3'>Encryption Messenger</h1>
+              <h1 className='text-2xl mt-3 ml-1'><b>Created in: C#</b></h1>
+              <p className='ml-2 mt-3 text-xl'>This webserver, created in C#, is capable of using
+                                             the RSA encryption algorithm to create Base64 encoded
+                                             private and public key for a user, and then using C#&apos;s
+                                             BigInteger class, encodes a given message and sends it
+                                             to another server hosted elsewhere, with the same code.
+                                             It uses asynchronous programming to send/listen for
+                                             incoming HTTP requests, and then perform the operations
+                                             accordingly.</p>
+            </div>
           </div>
-        </div>
+          <div></div>
+      </div>
+
+      <div className='flex justify-between mt-36'>
+        <div></div>
+          <div className='project-bubble w-80 h-80 bg-project-bg rounded-full overflow-visible'>
+            <div className='mt-36 -ml-[250px] w-[600px]'>
+              <h1 className='text-xl tracking-[10px] ml-1'>FEATURED PROJECT</h1>
+              <h1 className='text-5xl mt-3'>Java TCP/UDP Server</h1>
+              <h1 className='text-2xl mt-3 ml-1'><b>Created in: Java</b></h1>
+              <p className='ml-2 mt-3 text-xl'>This Server showcases the different aspects of
+                                              two of the most well known transmission protocols: 
+                                              TCP and UDP. The project actually involves two server: 
+                                              one TCP, and one UDP. The TCP server receives files from 
+                                              a client and for the image files that are too large, 
+                                              it sends them to the UDP server in chunked packets.
+                                              The server acknowledges and builds upon the shortcomings 
+                                              of both protocols and attempts to illustrate as such too.
+                </p>
+            </div>
+         </div>
       </div>
     </div>
   );
@@ -75,12 +111,13 @@ function NavBar() {
   return (
     <div className='h-22 p-14'>
       <div className='flex justify-between text-2xl'>
-        <h1 className='bg-white rounded-full w-20 h-20 text-4xl text-black text-center pt-5'><b>AK</b></h1>
+        <h1 className='bg-white rounded-full w-20 h-20 text-4xl 
+        text-black text-center pt-5'><b> AK </b></h1>
         <div className='flex justify-between gap-16'>
           <a href="#skills"><h1><b>SKILLS</b></h1></a>
           <a href="#projects"><h1><b>PROJECTS</b></h1></a>
           <a href='/Resume-Aashwin_Katiyar.pdf'><h1><b>RESUME</b></h1></a>
-          <h1><b>HOBBIES</b></h1>
+          <h1 className='text-unfinished-grey cursor-not-allowed'><b>HOBBIES</b></h1>
           <a href="https://www.linkedin.com/in/aashwin-katiyar-104b58183/" className='-mt-3'>
             <Image src="/icon-linkedin.svg" width={50} height={50} alt="LinkedIn"/>
           </a>
@@ -124,19 +161,6 @@ function LandingPage() {
 }
 
 
-function UnderConstruction() {
-  return (
-    <div className='p-16 text-xl'>
-      <h1>After a massive overhaul with an organized tech stack,
-          I am proud to showcase this website. Although it is still 
-          under construction, I will be adding rapid improvements 
-          and enhancements to it moving forward. Thank you for checking 
-          out the early beta!</h1>
-    </div>
-  );
-}
-
-
 function AllOtherSections() {
   return (
     <div className='p-14'>
@@ -152,7 +176,6 @@ export default function Home() {
     <main>
       <LandingPage/>
       <AllOtherSections/>
-      <UnderConstruction/>
     </main>
   )
 }
