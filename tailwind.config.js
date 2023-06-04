@@ -14,8 +14,10 @@ module.exports = {
       },
     },
     colors: {
+      'heading-blue': '#91cfff',
+      'res-back': '#321E6C',
+      'heading-purple': '#d5ccff',
       'unfinished-grey': '#c2c2c2',
-      'circle-blur': 'rgba(255, 255, 255, 0.2)',
       'project-bg': '#2a1f66',
       'skill-bg': '#1e154a',
       transparent: 'transparent',

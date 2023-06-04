@@ -8,6 +8,8 @@ export function TypewriterSub() {
       <Typewriter
         onInit={(typewriter) => {
           typewriter.typeString('Software Developer')
+            .deleteChars(9)
+            .typeString('Engineer')
             .pauseFor(1000)
             .deleteAll()
             .typeString('Artist')
@@ -28,4 +30,3 @@ export function TypewriterSub() {
       </div>
     );
 }
-  
