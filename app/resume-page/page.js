@@ -64,12 +64,10 @@ function ResSection() {
 
 				<li className='text-2xl'><b>E-store Website</b></li>
 					<ul className='list-disc pl-5 sm:text-xl'>
-							<li>Created a sentiment analysis algorithm that utilizes 
-									basic natural language processing to provide a polarizing 
-									weightage (in percentage) to tweets extracted from Twitter.</li>
-							<li>Coded the algorithm in python and used libraries like 
-									nltk (for NLP), pandas (for dataframes) and Tweepy (for 
-									extracting tweets from specific accounts using the Twitter API).</li>
+							<li>Designed and coded an e-store website about fictional pets.</li>
+							<li>Utilized Angular and Tailwind CSS to build the front-end 
+								and the java Spring Boot for the backend.</li>
+							<li>Stored the user and product data in separate JSON documents.</li>
 					</ul>
 
 				<li className='text-2xl'><b>Java TCP/UDP Server</b></li>
