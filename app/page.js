@@ -51,7 +51,7 @@ function ProjectSection() {
                                                more prominently. Thank you for checking out the early beta!</p>
           </div>
         </div>
-        <Image src='/giddion-placeholder.gif' width={300} height={100} alt='giddion placeholder' className='mt-32'/>
+        <div></div>
       </div>
 
       <div className='flex justify-between mt-36'>
@@ -60,12 +60,16 @@ function ProjectSection() {
             <div className='mt-36 -ml-[250px] w-[600px]'>
               <h1 className='text-heading-purple text-xl tracking-[10px] ml-1'>FEATURED PROJECT</h1>
               <h1 className='text-5xl mt-3'>Giddion - An All Purpose Discord Bot</h1>
-              <h1 className='text-2xl mt-3 ml-1'><b>Created in: Python, PyCord</b></h1>
-              <p className='ml-2 mt-3 text-xl'>Capable of playing music from title or URL, responding
-                                             to specific keywords, and moderating a server, this
-                                             bot packs the power to organize a server through
-                                             the magic of the discord python module and the async
-                                             functionality of python!
+              <h1 className='text-2xl mt-3 ml-1'><b>Created in: Python, Discord, YTDL</b></h1>
+              <p className='ml-2 mt-3 text-xl'>This Discord Bot was my first ever successful project made.
+                                               Equipped with the power of asynchronous programming, this bot
+                                               continuously listens to a text channel in discord for commands given
+                                               by a user. The commands can be anything ranging from "give me an introduction"
+                                               to "tell me a joke". If a command is prefixed by a "#" with keywords for playing music,
+                                               this bot uses the youtube API (through the YTDL library) to search for music on youtube,
+                                               download it and then play it by connecting to a voice channel. For example 
+                                               "#play [name of the song]" can trigger it to play a song, and "#pause" can pause the
+                                               currently playing song.
                 </p>
             </div>
          </div>
