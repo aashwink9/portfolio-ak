@@ -64,11 +64,11 @@ function ProjectSection() {
               <p className='ml-2 mt-3 text-xl'>This Discord Bot was my first ever successful project made.
                                                Equipped with the power of asynchronous programming, this bot
                                                continuously listens to a text channel in discord for commands given
-                                               by a user. The commands can be anything ranging from "give me an introduction"
-                                               to "tell me a joke". If a command is prefixed by a "#" with keywords for playing music,
+                                               by a user. The commands can be anything ranging from &quot;give me an introduction&quot;
+                                               to &quot;tell me a joke&quot;. If a command is prefixed by a &quot;#&quot; with keywords for playing music,
                                                this bot uses the youtube API (through the YTDL library) to search for music on youtube,
-                                               download it and then play it by connecting to a voice channel. For example 
-                                               "#play [name of the song]" can trigger it to play a song, and "#pause" can pause the
+                                               download it and then play it by connecting to a voice channel. For example,
+                                               &quot;#play [name of the song]&quot; can trigger it to play a song, and &quot;#pause&quot; can pause the
                                                currently playing song.
                 </p>
             </div>
