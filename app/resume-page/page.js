@@ -13,8 +13,8 @@ function ResButton() {
 				<div></div>
 			</div>
 			<div className='flex justify-center flex-wrap gap-y-10 gap-x-10 pt-10'>
-				<a href='/Resume-Aashwin_Katiyar.pdf'><button className='res-button text-black text-3xl w-80 h-28'>PDF</button></a>
-				<a href='/Resume-Aashwin_Katiyar.docx'><button className='res-button text-black text-3xl w-80 h-28'>DOCX</button></a>
+				<a href='/Resume-Aashwin_Kat.pdf'><button className='res-button text-black text-3xl w-80 h-28'>PDF</button></a>
+				<a href='/Resume-Aashwin_Kat.docx'><button className='res-button text-black text-3xl w-80 h-28'>DOCX</button></a>
 			</div>
 		</div>
 	);
