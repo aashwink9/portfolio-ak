@@ -76,7 +76,6 @@ function ProjectSection() {
          </div>
       </div>
 
-
       <div className='flex justify-between mt-44'>
           <div className='project-bubble w-80 h-80 bg-project-bg rounded-full overflow-visible inline-block'>
             <div className='absolute mt-36 ml-36 w-[600px]'>
