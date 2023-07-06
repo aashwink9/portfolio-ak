@@ -33,49 +33,41 @@ export function SkillDonut({skillColor, skillPercentage, lang}) {
     );
 }
 
-function OrbText({txt, br, txt_props}){
-	if (br){
-		const txt_split = txt.split(" ");
-		return (
-		<div>
-			<div className='orb w-36 h-36'></div>
-			<h1 className={`blur-none text-center text-2xl ${txt_props}`}>
-				{txt_split[0]}<br/>{txt_split[1]}
-			</h1>
-		</div>
-		);
-	}
-	else {
-		return (
-			<div>
-				<div className='orb w-36 h-36'></div>
-				<h1 className={`blur-none text-center text-2xl ${txt_props}`}>{txt}</h1>
-			</div>
-		);
-	}
-	
-}
 
 export function SkillCloud() {
     return (
-        <div className='text-heading-blue px-10 py-20 flex justify-between flex-wrap gap-x-20 gap-y-20'>
-					<OrbText txt='NEXTJS' br={false} txt_props='-mt-24' />
-					<OrbText txt='TAILWIND CSS' br={true} txt_props='-mt-28'/>
-					<OrbText txt='TYPESCRIPT' br={false} txt_props='-mt-24'/>
-					<OrbText txt='HTML5' br={false} txt_props='-mt-24'/>
-					<OrbText txt='MYSQL' br={false} txt_props='-mt-24'/>
+        <div className='text-heading-blue px-10 py-20 flex justify-between flex-wrap gap-x-10 gap-y-10'>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>RUST</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>TYPESCRIPT</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>.NET</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>MAVEN</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>MYSQL</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-6'>POSTGRE<br/>SQL</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-6'>MONGO<br/>DB</h1></div>
 
-					<OrbText txt='POSTGRE SQL' br={true} txt_props='-mt-28'/>
-					<OrbText txt='MONGO DB' br={true} txt_props='-mt-28'/>
-					<OrbText txt='SPRING BOOT' br={true} txt_props='-mt-28'/>
-					<OrbText txt='NODEJS' br={false} txt_props='-mt-24'/>
-					<OrbText txt='ANGULAR' br={false} txt_props='-mt-24'/>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-6'>SPRING<br/>BOOT</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>BASH</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>LATEX</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>WPF</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>XAML</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>HTML</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>CSS</h1></div>
 
-					<OrbText txt='PANDAS' br={false} txt_props='-mt-24'/>
-					<OrbText txt='NUMPY' br={false} txt_props='-mt-24'/>
-					<OrbText txt='PLOTLY' br={false} txt_props='-mt-24'/>
-					<OrbText txt='DASH' br={false} txt_props='-mt-24'/>
-					<OrbText txt='NLTK' br={false} txt_props='-mt-24'/>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>NEXTJS</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-6'>TAILWIND<br/>CSS</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>NODEJS</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>ANGULAR</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>VUE</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-6'>MATERIAL<br/>UI</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-6'>CHARTS.JS</h1></div>
+
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-6'>RESTFUL<br/>API</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>WEBGL</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>P5JS</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>FLASK</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>PANDAS</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>NUMPY</h1></div>
+					<div className='skill_sec w-32 h-24 text-center text-heading-purple'><h1 className='mt-8'>DASH</h1></div>
         </div>
     );
 }

@@ -1,23 +1,8 @@
-.orb {
-  border-radius: 50%;
-  filter: blur(25px);
-  background: radial-gradient(circle at center, #23255e, transparent 40%), 
-              conic-gradient(from 45deg, #472a70 52deg, #24425e 65deg, 
-              #3d1b63 50deg, #134270 78deg);
-  background-size: 350%;
-  animation: orb-animation 10s infinite alternate;
-}
-
-@keyframes orb-animation {
-  50% {
-    background-position: left;
-  }
-  50% {
-    background-position: center;
-  }
-  50% {
-    background-position: right;
-  }
+.skill_sec {
+  border-radius: 25px;
+  background: #1e154a;
+  box-shadow:  10px -10px 21px #18113c,
+               -10px 10px 21px #241958;
 }
 
 .skill-heads {

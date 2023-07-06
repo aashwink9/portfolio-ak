@@ -4,6 +4,7 @@ import { SkillDonut } from './components/skill-charts';
 import { TypewriterSub } from './components/client-comps';
 import Link from 'next/link';
 import { SkillCloud } from './components/skill-charts';
+import './hire-button.css';
 
 const roboto_mono = Roboto_Mono({
   weight: '400',
@@ -19,13 +20,13 @@ function SkillSection() {
   return (
     <div id='skills' className='bg-skill-bg rounded-2xl p-5'>
       <h1 className='text-5xl text-center mt-5'><b>SKILLS</b></h1>
-      <div className='flex justify-between p-10'>
-        <SkillDonut skillPercentage={80} skillColor={'#5bd7f0'} lang={"Python"} />
-        <SkillDonut skillPercentage={70} skillColor={'#5b9ef0'} lang={"Java"} />
-        <SkillDonut skillPercentage={60} skillColor={'#2831bf'} lang={"JavaScript"} />
-        <SkillDonut skillPercentage={60} skillColor={'#5d07f2'} lang={"React"} />
-        <SkillDonut skillPercentage={50} skillColor={'#7c07f2'} lang={"C#"} />
-        <SkillDonut skillPercentage={20} skillColor={'#9007f2'} lang={"C"} />
+      <div className='flex flex-wrap gap-y-12 gap-x-16 justify-center p-10'>
+        <SkillDonut skillPercentage={80} skillColor='#5bd7f0' lang="Python" />
+        <SkillDonut skillPercentage={70} skillColor='#5b9ef0' lang="Java" />
+        <SkillDonut skillPercentage={60} skillColor='#2831bf' lang="JavaScript" />
+        <SkillDonut skillPercentage={60} skillColor='#5d07f2' lang="React" />
+        <SkillDonut skillPercentage={50} skillColor='#7c07f2' lang="C#" />
+        <SkillDonut skillPercentage={20} skillColor='#9007f2' lang="C" />
       </div>
 
       <div className='p-10 mt-5'>
@@ -149,8 +150,7 @@ function NameHeading() {
           <h1 className='center-name text-7xl'><b>Hi, I&apos;m Aashwin</b></h1>
           <TypewriterSub className={roboto_mono.className}/>
           <a href='mailto:ak2577@rit.edu'>
-            <button className={`${roboto_slab.className} bg-white text-black text-2xl text-center 
-            rounded-3xl w-32 h-11 mt-5`}>
+            <button className={`${roboto_slab.className} hire_button mt-5 w-32 h-12 text-xl`}>
               Hire Me
             </button>
           </a>
