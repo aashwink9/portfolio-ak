@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Typewriter from "typewriter-effect";
+import './hamburger.css';
 
 export function TypewriterSub() {
     return (
@@ -29,4 +30,22 @@ export function TypewriterSub() {
       />
       </div>
     );
+}
+
+export function Hamburger() {
+  const [isActive, setActive] = React.useState(false);
+  const ToggleClass = () => {
+    setActive(!isActive); 
+  };
+
+  let isOpen = isActive ? 'open' : 'menu'
+
+  return (
+    <div className='hamburger' onClick={ToggleClass}>
+      <div className={isOpen + ' btn1'} data-menu="1">
+        <div className="icon-left"></div>
+        <div className="icon-right"></div>
+      </div>
+    </div>
+  );
 }

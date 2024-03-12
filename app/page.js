@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Roboto_Mono, Roboto_Slab } from 'next/font/google';
 import { SkillDonut } from './components/skill-charts';
-import { TypewriterSub } from './components/client-comps';
+import { TypewriterSub, Hamburger } from './components/client-comps';
 import Link from 'next/link';
 import { SkillCloud } from './components/skill-charts';
 import './hire-button.css';
@@ -124,18 +124,22 @@ function NavBar() {
       <div className='flex justify-between text-2xl'>
         <h1 className='bg-white rounded-full w-20 h-20 text-4xl 
         text-black text-center pt-5'><b> AK </b></h1>
-        <div className='flex justify-between gap-16'>
-          <a href="#skills"><h1><b>SKILLS</b></h1></a>
-          <a href="#projects"><h1><b>PROJECTS</b></h1></a>
-          <Link href="/resume-page"><h1><b>RESUME</b></h1></Link>
-          <h1 className='text-unfinished-grey cursor-not-allowed'><b>HOBBIES</b></h1>
-          <a href="https://www.linkedin.com/in/aashwin-katiyar-104b58183/" className='-mt-3'>
-            <Image src="/icon-linkedin.svg" width={50} height={50} alt="LinkedIn"/>
-          </a>
-          <a href="https://github.com/aashwink9" className='-mt-4'>
-            <Image src="/icon-github.svg" width={54} height={54} alt="Github"/>
-          </a>
+        <div className='hidden lg:block'>
+          <div className='flex justify-between gap-16'>
+            <a href="#skills"><h1><b>SKILLS</b></h1></a>
+            <a href="#projects"><h1><b>PROJECTS</b></h1></a>
+            <Link href="/resume-page"><h1><b>RESUME</b></h1></Link>
+            <h1 className='text-unfinished-grey cursor-not-allowed'><b>HOBBIES</b></h1>
+            <a href="https://www.linkedin.com/in/aashwin-katiyar-104b58183/" className='-mt-3'>
+              <Image src="/icon-linkedin.svg" width={50} height={50} alt="LinkedIn"/>
+            </a>
+            <a href="https://github.com/aashwink9" className='-mt-4'>
+              <Image src="/icon-github.svg" width={54} height={54} alt="Github"/>
+            </a>
+          </div>
         </div>
+
+        <Hamburger/>
       </div>
     </div>
   );
