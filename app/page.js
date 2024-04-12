@@ -139,7 +139,7 @@ function NavBar() {
           </div>
         </div>
 
-        <Hamburger/>
+        {/* <Hamburger/> */}
       </div>
     </div>
   );
